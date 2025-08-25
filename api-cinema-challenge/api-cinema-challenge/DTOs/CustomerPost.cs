@@ -1,6 +1,6 @@
 ﻿namespace api_cinema_challenge.DTOs
 {
-    public class CustomerPut
+    public class CustomerPost
     {
         public string Name { get; set; }
         public string Email { get; set; }

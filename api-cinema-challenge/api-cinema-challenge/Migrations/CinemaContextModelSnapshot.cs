@@ -32,7 +32,7 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("createdAt");
+                        .HasColumnName("createdat");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -51,7 +51,7 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("updatedAt");
+                        .HasColumnName("updatedat");
 
                     b.HasKey("Id");
 
@@ -68,7 +68,7 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("createdAt");
+                        .HasColumnName("createdat");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -82,7 +82,7 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<int>("RuntimeMins")
                         .HasColumnType("integer")
-                        .HasColumnName("runtimeMins");
+                        .HasColumnName("runtimemins");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -91,7 +91,7 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("updatedAt");
+                        .HasColumnName("updatedat");
 
                     b.HasKey("Id");
 
@@ -112,7 +112,7 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("createdAt");
+                        .HasColumnName("createdat");
 
                     b.Property<int>("MovieId")
                         .HasColumnType("integer");
@@ -123,11 +123,11 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<DateTime>("StartsAt")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("startsAt");
+                        .HasColumnName("startsat");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
-                        .HasColumnName("updatedAt");
+                        .HasColumnName("updatedat");
 
                     b.HasKey("Id");
 
@@ -149,7 +149,7 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<int>("NumSeats")
                         .HasColumnType("integer")
-                        .HasColumnName("numSeats");
+                        .HasColumnName("numseats");
 
                     b.Property<int>("ScreeningId")
                         .HasColumnType("integer");

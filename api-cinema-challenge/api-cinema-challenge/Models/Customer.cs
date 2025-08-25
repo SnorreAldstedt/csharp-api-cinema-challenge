@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Net.Mail;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace api_cinema_challenge.Models
@@ -21,13 +22,13 @@ namespace api_cinema_challenge.Models
         [Column("phone")]
         public string Phone { get; set; }
 
-        [Column("createdAt")]
+        [Column("createdat")]
         public DateTime CreatedAt { get; set; }
 
-        [Column("updatedAt")]
+        [Column("updatedat")]
         public DateTime UpdatedAt { get; set; }
 
-        public List<Ticket> Tickets { get; set; }= new List<Ticket>(); 
+        public IEnumerable<Ticket> Tickets { get; set; }= new List<Ticket>(); 
 
     }
 }

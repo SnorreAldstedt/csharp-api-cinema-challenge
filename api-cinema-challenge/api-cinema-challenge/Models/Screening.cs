@@ -15,13 +15,13 @@ namespace api_cinema_challenge.Models
         [Column("capacity")]
         public int Capacity {  get; set; }
 
-        [Column("startsAt")]
+        [Column("startsat")]
         public DateTime StartsAt { get; set; }
 
-        [Column("createdAt")]
+        [Column("createdat")]
         public DateTime CreatedAt { get; set; }
 
-        [Column("updatedAt")]
+        [Column("updatedat")]
         public DateTime UpdatedAt { get; set; }
 
         [ForeignKey("Movies")]

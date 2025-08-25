@@ -18,13 +18,13 @@ namespace api_cinema_challenge.Models
         [Column("description")]
         public string Description { get; set; }
 
-        [Column("runtimeMins")]
+        [Column("runtimemins")]
         public int RuntimeMins { get; set; }
 
-        [Column("createdAt")]
+        [Column("createdat")]
         public DateTime CreatedAt { get; set; }
 
-        [Column("updatedAt")]
+        [Column("updatedat")]
         public DateTime UpdatedAt { get; set; }
 
         public List<Screening> Screenings { get; set; } = new List<Screening>();

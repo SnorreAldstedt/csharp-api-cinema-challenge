@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace api_cinema_challenge.Migrations
 {
     /// <inheritdoc />
-    public partial class First : Migration
+    public partial class Working : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -21,8 +21,8 @@ namespace api_cinema_challenge.Migrations
                     name = table.Column<string>(type: "text", nullable: false),
                     email = table.Column<string>(type: "text", nullable: false),
                     phone = table.Column<string>(type: "text", nullable: false),
-                    createdAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    updatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    createdat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    updatedat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,9 +38,9 @@ namespace api_cinema_challenge.Migrations
                     title = table.Column<string>(type: "text", nullable: false),
                     rating = table.Column<string>(type: "text", nullable: false),
                     description = table.Column<string>(type: "text", nullable: false),
-                    runtimeMins = table.Column<int>(type: "integer", nullable: false),
-                    createdAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    updatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    runtimemins = table.Column<int>(type: "integer", nullable: false),
+                    createdat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    updatedat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -55,9 +55,9 @@ namespace api_cinema_challenge.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     screenNumber = table.Column<int>(type: "integer", nullable: false),
                     capacity = table.Column<int>(type: "integer", nullable: false),
-                    startsAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    createdAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    updatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    startsat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    createdat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    updatedat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     MovieId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
@@ -77,7 +77,7 @@ namespace api_cinema_challenge.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    numSeats = table.Column<int>(type: "integer", nullable: false),
+                    numseats = table.Column<int>(type: "integer", nullable: false),
                     CustomerId = table.Column<int>(type: "integer", nullable: false),
                     ScreeningId = table.Column<int>(type: "integer", nullable: false)
                 },

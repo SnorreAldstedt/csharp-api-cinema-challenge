@@ -1,6 +1,7 @@
 ﻿using api_cinema_challenge.Models;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Linq;
+using Microsoft.AspNetCore.Mvc;
 
 namespace api_cinema_challenge.Data
 {
