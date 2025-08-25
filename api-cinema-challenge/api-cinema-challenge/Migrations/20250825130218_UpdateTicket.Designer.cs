@@ -12,8 +12,8 @@ using api_cinema_challenge.Data;
 namespace api_cinema_challenge.Migrations
 {
     [DbContext(typeof(CinemaContext))]
-    [Migration("20250822121753_Working")]
-    partial class Working
+    [Migration("20250825130218_UpdateTicket")]
+    partial class UpdateTicket
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -147,6 +147,10 @@ namespace api_cinema_challenge.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("createdat");
+
                     b.Property<int>("CustomerId")
                         .HasColumnType("integer");
 
@@ -156,6 +160,10 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<int>("ScreeningId")
                         .HasColumnType("integer");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("updatedat");
 
                     b.HasKey("Id");
 

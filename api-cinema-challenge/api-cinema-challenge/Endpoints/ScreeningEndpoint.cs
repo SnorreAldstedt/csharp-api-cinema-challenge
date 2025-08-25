@@ -25,14 +25,12 @@ namespace api_cinema_challenge.Endpoints
         public static async Task<IResult> GetAll(IRepository<Screening> screenRepo, int id)
         {
             List<ScreeningGet> response = new List<ScreeningGet>();
-            var results = await screenRepo.GetAll();
+            var all_results = await screenRepo.GetAll();
+            var results = all_results.Where(s => s.MovieId == id);
             foreach (Screening s in results)
             {
-                if (s.MovieId == id)
-                {
-                    ScreeningGet screenShow = ScreenToScreeningGet(s);
-                    response.Add(screenShow);
-                }
+                ScreeningGet screenShow = ScreenToScreeningGet(s);
+                response.Add(screenShow); 
             }
             return TypedResults.Ok(response);
         }

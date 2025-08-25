@@ -17,10 +17,16 @@ namespace api_cinema_challenge.Models
 
         public Customer Customer { get; set; }
 
-        [ForeignKey("Screening")]
+        [ForeignKey("Screenings")]
         public int ScreeningId { get; set; }
 
         public Screening Screening { get; set; }
+
+        [Column("createdat")]
+        public DateTime CreatedAt { get; set; }
+
+        [Column("updatedat")]
+        public DateTime UpdatedAt { get; set; }
 
     }
 }

@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace api_cinema_challenge.Migrations
 {
     /// <inheritdoc />
-    public partial class Working : Migration
+    public partial class UpdateTicket : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -79,7 +79,9 @@ namespace api_cinema_challenge.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     numseats = table.Column<int>(type: "integer", nullable: false),
                     CustomerId = table.Column<int>(type: "integer", nullable: false),
-                    ScreeningId = table.Column<int>(type: "integer", nullable: false)
+                    ScreeningId = table.Column<int>(type: "integer", nullable: false),
+                    createdat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    updatedat = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {

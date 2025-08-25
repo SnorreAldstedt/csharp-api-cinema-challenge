@@ -144,6 +144,10 @@ namespace api_cinema_challenge.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("createdat");
+
                     b.Property<int>("CustomerId")
                         .HasColumnType("integer");
 
@@ -153,6 +157,10 @@ namespace api_cinema_challenge.Migrations
 
                     b.Property<int>("ScreeningId")
                         .HasColumnType("integer");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("updatedat");
 
                     b.HasKey("Id");
 

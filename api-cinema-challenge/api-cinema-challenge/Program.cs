@@ -16,6 +16,7 @@ builder.Services.AddDbContext<CinemaContext>();
 builder.Services.AddScoped<IRepository<Customer>, Repository<Customer>>();
 builder.Services.AddScoped<IRepository<Movie>, Repository<Movie>>();
 builder.Services.AddScoped<IRepository<Screening>, Repository<Screening>>();
+builder.Services.AddScoped<IRepository<Ticket>, Repository<Ticket>>();
 
 
 builder.Services.AddDbContext<CinemaContext>(options =>
@@ -42,4 +43,5 @@ app.UseHttpsRedirection();
 app.ConfigureCustomerEndpoints();
 app.ConfigureMovieEndpoints();
 app.ConfigureScreeningEndpoints();
+app.ConfigureTicketEndpoints();
 app.Run();
